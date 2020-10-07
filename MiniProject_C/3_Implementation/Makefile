@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = Department Store Management System
 
 # Output directory
 BUILD = build
