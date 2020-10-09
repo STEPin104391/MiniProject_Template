@@ -3,7 +3,7 @@
 
 /* Modify these two lines according to the project */
 #include <Department_store_management_system.h>
-#define PROJECT_NAME    "Department store management system"
+#define PROJECT_NAME    "Department_store_management_system"
 
 /* Prototypes for all the test functions */
 void test_add(void);
