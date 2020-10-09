@@ -2,7 +2,7 @@
 #include <CUnit/CUnit.h>
 
 /* Modify these two lines according to the project */
-#include <calculator_operations.h>
+#include <Department_store_management_system.h>
 #define PROJECT_NAME    "Department store management system"
 
 /* Prototypes for all the test functions */
