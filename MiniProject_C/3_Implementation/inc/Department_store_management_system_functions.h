@@ -11,12 +11,12 @@
 #include <stdio_ext.h>
 
 /**
-*  adds the operand1 and operand2 and returns the result
+*  checks whether the item exists or not for adding and editing functions
 * @param[in] operand1 
 * @param[in] operand2 
-* @return Result of operand1 + operand2
+* @return Result of 
 */
-int add(int operand1, int operand2);
+void c_code(char y[])
 
 /**
 *  subtracts the operand1, operand2 and returns the result
