@@ -1,34 +1,37 @@
 # Name of the project
-PROJECT_NAME = Department Store Management System
+PROJECT_NAME = Department_store_management_system
 
 # Output directory
 BUILD = build
 
+#compiler
+CC=gcc
+
 # All source code files
-SRC = project_main.c\
-src/calculator_operations.c\
+SRC = Department_store_main.c\
+src/Department_store_functions.c
 
 # All test source files
-TEST_SRC = src/calculator_operations.c\
-test/test_calculator_operations.c
+TEST_SRC = src/Department_store_functions.c\
+test/Test_Department_store_functions.c
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME)
 
 # All include folders with header files
 INC	= -Iinc
 
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME)
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
 
 # Default target built
-$(PROJECT_NAME):all
+$(PROJECT_NAME):Debug
 
 # Run the target even if the matching name exists
 .PHONY: run clean test  doc all
 
-all: $(SRC) $(BUILD)
+Debug: $(SRC) $(BUILD)
 	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
 
 # Call `make run` to run the application
@@ -39,10 +42,10 @@ run:$(PROJECT_NAME)
 doc:
 	make -C ./documentation
 
-# Build and run the unit tests
+# call 'make test' to run unit after calling 'make run'
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT).out -lcunit
+	./$(TEST_OUTPUT).out
 
 # Remove all the built files, invoke by `make clean`
 clean:
@@ -51,3 +54,4 @@ clean:
 # Create new build folder if not present
 $(BUILD):
 	mkdir build
+
